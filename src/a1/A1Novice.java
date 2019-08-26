@@ -51,7 +51,7 @@ public class A1Novice {
 		// Prints out customers array in correct format.
 		for(int i = 0; i < numCustomers; i++)
 		{
-			System.out.println(customers[i][0]+". "+customers[i][1]+": "+String.format("%.2f", customers[i][2]));
+			System.out.println(customers[i][0]+". "+customers[i][1]+": "+String.format("%.2f", Double.parseDouble(customers[i][2])));
 		}
 	}
 }
