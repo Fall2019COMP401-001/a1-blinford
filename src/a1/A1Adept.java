@@ -55,9 +55,9 @@ public class A1Adept {
 		
 		String average = String.format("%.2f",average(customers));
 		
-		System.out.println("MAX: "+maxName+" ("+max+")");
-		System.out.println("MIN: "+minName+" ("+min+")");
-		System.out.println("AVG: "+average);
+		System.out.println("Biggest: "+maxName+" ("+max+")");
+		System.out.println("Smallest: "+minName+" ("+min+")");
+		System.out.println("Average: "+average);
 	}
 	
 	
@@ -75,7 +75,7 @@ public class A1Adept {
 	
 	public static double max(String[][] customers)
 	{
-		double max = 0;
+		double max = Double.parseDouble(customers[0][2])
 		
 		for(String[] a : customers)
 		{
@@ -90,8 +90,8 @@ public class A1Adept {
 	
 	public static String nameOfMax(String[][] customers)
 	{
-		double max = 0;
-		String name = "";
+		double max = Double.parseDouble(customers[0][2]);
+		String name = customers[0][0] + " " + customers[0][1];
 		
 		for(String[] a : customers)
 		{
@@ -123,7 +123,7 @@ public class A1Adept {
 	public static String nameOfMin(String[][] customers)
 	{
 		double min = Double.parseDouble(customers[0][2]);
-		String name = "";
+		String name = customers[0][0] + " " + customers[0][1];
 		
 		for(String[] a : customers)
 		{
