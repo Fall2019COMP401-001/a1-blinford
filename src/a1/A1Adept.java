@@ -75,7 +75,7 @@ public class A1Adept {
 	
 	public static double max(String[][] customers)
 	{
-		double max = Double.parseDouble(customers[0][2])
+		double max = Double.parseDouble(customers[0][2]);
 		
 		for(String[] a : customers)
 		{
