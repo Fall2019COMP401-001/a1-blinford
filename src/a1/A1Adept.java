@@ -16,7 +16,10 @@ public class A1Adept {
 		double totalCost;
 		
 		String[][] items = new String[numItems][2];
+		//items[x][0] name of x
+		//items[x][1] price of x
 		
+		//populates items array
 		for(int i = 0; i < numItems; i++)
 		{
 			items[i][0] = scan.next();
@@ -26,7 +29,11 @@ public class A1Adept {
 		int numCustomers = scan.nextInt();
 		
 		String[][] customers = new String[numCustomers][3];
+		//customers[x][0] first name of customer x
+		//customers[x][1] last name of customer x
+		//customers[x][2] total cost for customer x
 		
+		//populates customers array
 		for(int i = 0; i < numCustomers; i++)
 		{
 			customers[i][0] = scan.next();
@@ -36,6 +43,7 @@ public class A1Adept {
 			
 			totalCost = 0;
 			
+			//finds the cost by finding the sum of each individual item's cost
 			for(int j = 0; j < numItemsBought; j++)
 			{
 				quantity = scan.nextInt();
@@ -55,6 +63,8 @@ public class A1Adept {
 		
 		String average = String.format("%.2f",average(customers));
 		
+		
+		//prints out the formatted values
 		System.out.println("Biggest: "+maxName+" ("+max+")");
 		System.out.println("Smallest: "+minName+" ("+min+")");
 		System.out.println("Average: "+average);

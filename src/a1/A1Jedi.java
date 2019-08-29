@@ -11,14 +11,21 @@ public class A1Jedi {
 		int reportLength = scan.nextInt();
 		
 		String[][] report = new String[reportLength][4];
+		//report[x][0] name of x
+		//report[x][1] total number bought
+		//report[x][2] number of customers who bought x
+		//report[x][3] names of customers who bought x
 		
+		//populates report array
 		for(int i = 0; i < reportLength; i++)
 		{
-			report[i][0] = scan.next(); //stores name of object
+			report[i][0] = scan.next();
 			scan.next();
-			report[i][1] = "0"; //stores total number bought
-			report[i][2] = "0"; //stores number of customers
-			report[i][3] = ""; //stores names of customers
+			
+			//assigns starting values to each (null would be an invalid start)
+			report[i][1] = "0";
+			report[i][2] = "0";
+			report[i][3] = "";
 		}
 		
 		int numCustomers = scan.nextInt();
@@ -26,12 +33,14 @@ public class A1Jedi {
 		
 		String itemBought, name;
 		
+		//assigns correct values to report array
 		for(int i = 0; i < numCustomers; i++)
 		{
 			name = scan.next() + " " + scan.next();
 			
 			numItems = scan.nextInt();
 			
+			//loops through each set of items
 			for(int j = 0; j < numItems; j++)
 			{
 				numBought = scan.nextInt();
@@ -43,6 +52,8 @@ public class A1Jedi {
 					{
 						report[a][1] = (numBought+Integer.parseInt(report[a][1]))+"";
 						
+						//if the customer has not previously purchased the same item,
+						//then the name will be added to the list
 						if(!report[a][3].contains(name))
 						{
 							report[a][2] = (1+Integer.parseInt(report[a][2]))+"";
@@ -54,6 +65,7 @@ public class A1Jedi {
 			}
 		}
 		
+		//prints out values in correct format
 		for(int i = 0; i < reportLength; i++)
 		{
 			if(report[i][1].equals("0"))
